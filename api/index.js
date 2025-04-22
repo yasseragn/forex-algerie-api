@@ -1,4 +1,4 @@
-HEAD
+<<<<<<< HEAD
 const axios = require('axios');
 const cheerio = require('cheerio');
 
@@ -24,7 +24,7 @@ module.exports = async (req, res) => {
       }
     });
 
-
+=======
 const puppeteer = require('puppeteer');
 
 module.exports = async (req, res) => {
@@ -57,17 +57,17 @@ module.exports = async (req, res) => {
 
     await browser.close();
 
-188c3cb (install puppeteer and fix data extraction)
+>>>>>>> 188c3cb (install puppeteer and fix data extraction)
     const updated_at = new Date().toLocaleString('fr-DZ', {
       timeZone: 'Africa/Algiers',
       hour12: false
     });
 
     res.status(200).json({ updated_at, data });
- HEAD
+<<<<<<< HEAD
   } catch (error) {
     res.status(500).json({ error: 'Échec du chargement des données.' });
-
+=======
 
   } catch (error) {
     res.status(500).json({ error: 'Échec du chargement via Puppeteer', details: error.message });
